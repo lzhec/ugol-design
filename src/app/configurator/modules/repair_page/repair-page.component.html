@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="wrapper_base">
+      <div>
+        <div class="wrapper_base_header_text">Базовые настройки ремонта</div>
+        <div class="wrapper_base_blocks">
+          <app-select-repair-type
+            [caption]="caption"
+            (dataChanged)="dataChangeHandler($event)"
+          />
+          <app-select-repair-type [caption]="captionLevel" />
+          <app-select-repair-type [caption]="captionMaterial" />
+        </div>
+      </div>
+      <app-select-repair-type-dialog />
+    </div>
+    <div class="description">
+      Выберите основные параметры вашего ремонта —укажите какой ремонт
+      планируете, ценовую категорию бригады и материалов. После этого здесь
+      появится перечень ремонтных работ, который вы можете скорректировать.
+    </div>
+  </div>
+</div>

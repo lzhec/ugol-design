@@ -1,0 +1,24 @@
+@import 'theming/colors/colors';
+
+$light-palette: (
+  danger-color: $danger,
+  success-color: $success,
+  success-light-color: $success-light,
+  success-blue-color: $success-blue,
+  warning-color: $warning,
+  bg-main-color: $light-main-bg,
+  bg-additional-color: $light-additional-bg,
+  bg-block-main-color: $light-block-main-bg,
+  bg-extra-color: $light-extra-bg,
+  text-color: $dark-primary,
+  text-additional-color: $light-additional-text-color,
+  text-additional-2-color: $light-additional-2-text-color,
+  text-extra-color: $light-extra-text-color,
+  text-inverse-color: $dark-extra-text-color,
+  text-static-color: $light-primary,
+  text-link-color: $success-blue,
+  border-color: $light-additional,
+  shadow-color: $shadow-color,
+  box-shadow: 0px 4px 8px $shadow-color,
+);
+

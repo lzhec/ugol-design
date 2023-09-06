@@ -1,0 +1,272 @@
+@import "theming/functions";
+
+$text-color: app-color(text-color);
+$text-extra-color: app-color(text-extra-color);
+$text-extra-color-25: app-color(text-extra-color, 0.25);
+$success-color: app-color(success-color);
+$success-blue-color: app-color(success-blue-color);
+$danger-color: app-color(danger-color);
+$warning-color: app-color(warning-color);
+$text-link-color: app-color(text-link-color);
+$text-static-color: app-color(text-static-color);
+$text-inverse-color: app-color(text-inverse-color);
+
+@mixin svg-skeleton-color($color) {
+  svg {
+    rect:not([stroke]) {
+      fill: $color;
+    }
+
+    rect:not([fill]) {
+      stroke: $color;
+    }
+
+    path:not([fill]) {
+      stroke: $color;
+    }
+
+    path:not([stroke]) {
+      fill: $color;
+    }
+
+    circle:not([fill]) {
+      stroke: $color;
+    }
+
+    circle:not([stroke]) {
+      fill: $color;
+    }
+  }
+}
+
+.app-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.65;
+
+  &.--disabled {
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &.--disabled-hover {
+    opacity: 1;
+    cursor: unset;
+  }
+}
+
+.app-svg-stroke {
+  svg {
+    stroke: $text-extra-color;
+
+    [stroke] {
+      stroke: $text-extra-color;
+    }
+  }
+
+  &.--inverse {
+    svg {
+      stroke: $text-inverse-color;
+
+      [stroke] {
+        stroke: $text-inverse-color;
+      }
+    }
+  }
+
+  &.--static {
+    svg {
+      stroke: $text-static-color;
+
+      [stroke] {
+        stroke: $text-static-color;
+      }
+    }
+  }
+
+  &.--danger {
+    svg {
+      stroke: $danger-color;
+
+      [stroke] {
+        stroke: $danger-color;
+      }
+    }
+  }
+
+  &.--warning {
+    svg {
+      stroke: $warning-color;
+
+      [stroke] {
+        stroke: $warning-color;
+      }
+    }
+  }
+
+  &.--success {
+    svg {
+      stroke: $success-color;
+
+      [stroke] {
+        stroke: $success-color;
+      }
+    }
+  }
+
+  &.--success-blue {
+    svg {
+      stroke: $success-blue-color;
+
+      [stroke] {
+        stroke: $success-blue-color;
+      }
+    }
+  }
+
+  &.--link {
+    svg {
+      stroke: $text-link-color;
+
+      [stroke] {
+        stroke: $text-link-color;
+      }
+    }
+  }
+
+  &.--disabled {
+    svg {
+      stroke: $text-extra-color-25;
+
+      [stroke] {
+        stroke: $text-extra-color-25;
+      }
+    }
+  }
+}
+
+.app-svg-fill {
+  svg {
+    fill: $text-extra-color;
+
+    [fill] {
+      fill: $text-extra-color;
+    }
+  }
+
+  &.--inverse {
+    svg {
+      fill: $text-inverse-color;
+
+      [fill] {
+        fill: $text-inverse-color;
+      }
+    }
+  }
+
+  &.--static {
+    svg {
+      fill: $text-static-color;
+
+      [fill] {
+        fill: $text-static-color;
+      }
+    }
+  }
+
+  &.--danger {
+    svg {
+      fill: $danger-color;
+
+      [fill] {
+        fill: $danger-color;
+      }
+    }
+  }
+
+  &.--warning {
+    svg {
+      fill: $warning-color;
+
+      [fill] {
+        fill: $warning-color;
+      }
+    }
+  }
+
+  &.--success {
+    svg {
+      fill: $success-color;
+
+      [fill] {
+        fill: $success-color;
+      }
+    }
+  }
+
+  &.--success-blue {
+    svg {
+      fill: $success-blue-color;
+
+      [fill] {
+        fill: $success-blue-color;
+      }
+    }
+  }
+
+  &.--link {
+    svg {
+      fill: $text-link-color;
+
+      [fill] {
+        fill: $text-link-color;
+      }
+    }
+  }
+
+  &.--disabled {
+    svg {
+      fill: $text-extra-color-25;
+
+      [fill] {
+        fill: $text-extra-color-25;
+      }
+    }
+  }
+}
+
+.app-svg-skeleton {
+  svg {
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+  }
+
+  @include svg-skeleton-color($text-color);
+
+  &.--danger {
+    @include svg-skeleton-color($danger-color);
+  }
+
+  &.--success {
+    @include svg-skeleton-color($success-color);
+  }
+
+  &.--success-blue {
+    @include svg-skeleton-color($success-blue-color);
+  }
+
+  &.--warning {
+    @include svg-skeleton-color($warning-color);
+  }
+
+  &.--inverse {
+    @include svg-skeleton-color($text-inverse-color);
+  }
+}

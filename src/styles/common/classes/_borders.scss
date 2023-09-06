@@ -1,0 +1,106 @@
+@import 'theming/functions';
+
+
+$border-color: app-color(border-color);
+$success-color: app-color(success-color);
+$success-blue-color: app-color(success-blue-color);
+$danger-color: app-color(danger-color);
+$warning-color: app-color(warning-color);
+
+
+
+.app-border {
+  border: 1px solid $border-color;
+
+  &--imp {
+    border: 1px solid $border-color !important;
+  }
+}
+
+.app-border-left {
+  border-left: 1px solid $border-color;
+}
+
+.app-border-left--imp {
+  border-left: 1px solid $border-color !important;
+}
+
+.app-border-right {
+  border-right: 1px solid $border-color;
+}
+
+.app-border-right--imp {
+  border-right: 1px solid $border-color !important;
+}
+
+.app-border-bottom {
+  border-bottom: 1px solid $border-color !important;
+}
+
+.app-border-top {
+  border-top: 1px solid $border-color;
+}
+
+.app-border-danger {
+  border-color: $danger-color;
+
+  &--imp {
+    border-color: $danger-color !important;
+  }
+}
+
+.app-border-warning {
+  border-color: $warning-color;
+
+  &--imp {
+    border-color: $warning-color !important;
+  }
+}
+
+.app-border-success {
+  border-color: $success-color;
+
+  &--imp {
+    border-color: $success-color !important;
+  }
+}
+
+.app-border-success-blue {
+  border-color: $success-blue-color;
+
+  &--imp {
+    border-color: $success-blue-color !important;
+  }
+}
+
+.app-border-radius {
+  &-2 {
+    border-radius: 2px !important;
+  }
+
+  &-4 {
+    border-radius: 4px !important;
+  }
+
+  &-4-top {
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+  }
+
+  &-4-bottom {
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+  }
+
+  &-6 {
+    border-radius: 6px !important;
+  }
+
+  &-8 {
+    border-radius: 8px !important;
+  }
+
+  &-10 {
+    border-radius: 10px !important;
+  }
+}

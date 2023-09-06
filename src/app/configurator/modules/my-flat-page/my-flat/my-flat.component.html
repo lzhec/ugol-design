@@ -1,0 +1,219 @@
+<div class="container">
+    <ng-container [ngSwitch]="currentStep">
+        <ng-container *ngSwitchCase="steps.DESCRIPTION">
+            <div class="wrapper">
+                <div class="description">
+                    Для начала работы с конфигуратором необходимо заполнить информацию о квартире
+                </div>
+                <div class="row_buttons">
+                    <button (click)="selectApartment()"> Выбрать квартиру по жилому комплексу</button>
+                    <button (click)="manualSettings()"> Ввести параметры в ручную</button>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngSwitchCase="steps.CONFIGURATION">
+            <div class="configuration-wrapper">
+                <div class="configuration-column">
+                    <div class="title">Моя квартира</div>
+                    <div class="apartment-info">
+                        <div class="apartment-plan">
+                            <img [src]="'img/plane.jpeg' | assetsUrl">
+                        </div>
+                        <div class="apartment-info_column">
+                            <div class="apartment-id">#9454740</div>
+                            <div>
+                                <div class="complex-name">ЖК ID Murino</div>
+                                <div class="apartment-name">1-комнатная квартира 34.13 м²</div>
+                            </div>
+
+                            <div class="select-button" (click)="selectApartment()" >Выбрать другую квартиру</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="configuration-row">
+                    <div class="configuration-column split">
+                        <div class="title">Основные характеристики</div>
+                        <div class="subtitle">Проверьте и при необходимости скорректируйте характеристики квартиры</div>
+                        <div class="configuration-settings" [formGroup]="settingsForm">
+                            <div class="settings-row">
+                                <div class="settings_description">
+                                    Количество комнат
+                                </div>
+                                <input formControlName="roomsCount" type="text">
+                            </div>
+                            <div class="settings-row">
+                                <div class="settings_description">
+                                    Общая площадь
+                                </div>
+                                <input type="text">
+                            </div>
+                            <div class="settings-row">
+                                <div class="settings_description">
+                                    Высота потолков
+                                </div>
+                                <input type="text">
+                            </div>
+                            <div class="settings-row">
+                                <div class="settings_description">
+                                    Санузел
+                                </div>
+                                <input type="text">
+                            </div>
+                            <div class="settings-row">
+                                <div class="settings_description">
+                                    Общая площадь С/У
+                                </div>
+                                <input type="text">
+                            </div>
+                            <div class="settings-row">
+                                <div class="settings_description">
+                                    Текущее состояние отделки
+                                </div>
+                                <input type="text">
+                            </div>
+                            <div class="settings-row">
+                                <div class="settings_description">
+                                    Кол-во стояков ХВС и ГВС
+                                </div>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="configuration-column split">
+                        <div class="title">Технические данные</div>
+                        <div class="subtitle">Эти параметры будут использованы для расчета объемов и стоимости работ</div>
+                        <div class="extra-settings">
+                            Заполните основные характеристики для отображения технических данных, чтобы рассчитать объем и стоимость всех работ
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </ng-container>
+    </ng-container>
+</div>
+
+
+
+<p-dialog styleClass="dialog"  [(visible)]="visible" [modal]="true" [style]="{ width: '1121px', height: '736px'}" [draggable]="false" [resizable]="false">
+    <ng-template pTemplate="header">
+        <span class="header-title">Выбирите квртиру из каталога</span>
+    </ng-template>
+    <div class="modal-wrapper">
+        <div class="search-column">
+            <div class="subtitle">Жилой комплекс</div>
+            <input class="search-field" type="search"  placeholder="Поиск по названию">
+            <div class="complexes-list">
+                <div class="list-item">
+                    Название ЖК
+                </div>
+            </div>
+        </div>
+        <div class="apartment-column">
+            <div class="apartment-filter" [formGroup]="apartmentFilterForm">
+                <div class="filter-row">
+                    <div class="select-count-rooms">
+                        <div class="subtitle">Планировка</div>
+                        <div class="input-row">
+                            <input
+                                    type="radio"
+                                    name=" countRooms"
+                                    id="studio"
+                                    value="0"
+                            >
+                            <label class="apartment-count" for="studio">
+                                <div class="radio-button">Студии</div>
+                            </label>
+                            <input
+                                    type="radio"
+                                    name=" countRooms"
+                                    id="1"
+                                    value="1"
+                            >
+                            <label class="apartment-count" for="1">
+                                <div class="radio-button">1к</div>
+                            </label>
+                            <input
+                                    type="radio"
+                                    name=" countRooms"
+                                    id="2"
+                                    value="2"
+                            >
+                            <label class="apartment-count" for="2">
+                                <div class="radio-button">2к</div>
+                            </label>
+
+                            <input
+                                    type="radio"
+                                    name=" countRooms"
+                                    id="3"
+                                    value="3"
+                            >
+                            <label class="apartment-count" for="3">
+                                <div class="radio-button">3к</div>
+                            </label>
+
+                            <input
+                                    type="radio"
+                                    name=" countRooms"
+                                    id="4"
+                                    value="4"
+                            >
+                            <label class="apartment-count" for="4">
+                                <div class="radio-button">4к</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="area-total-from">
+                        <div class="subtitle">Площадь от</div>
+                        <div class="input-wrapper">
+                            <input class="input-field" type="number">
+                            <div class="input-field-measure">м<sup>2</sup></div>
+                        </div>
+                    </div>
+                    <div class="area-total-to">
+                        <div class="subtitle">Площадь до</div>
+                        <div class="input-wrapper">
+                            <input class="input-field" type="number">
+                            <div class="input-field-measure">м<sup>2</sup></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="apartment-plan-list">
+                <div class="apartment-item">
+                    <img src="" alt="">
+                    <button>Выбрать</button>
+                </div>
+                <div class="apartment-item">
+                    <img src="" alt="">
+                    <button>Выбрать</button>
+                </div>
+                <div class="apartment-item">
+                    <img src="" alt="">
+                    <button>Выбрать</button>
+                </div>
+                <div class="apartment-item">
+                    <img src="" alt="">
+                    <button>Выбрать</button>
+                </div>
+                <div class="apartment-item">
+                    <img src="" alt="">
+                    <button>Выбрать</button>
+                </div>
+                <div class="apartment-item">
+                    <img src="" alt="">
+                    <button>Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template pTemplate="footer">
+        <div class="buttons-row">
+            <button (click)="closeModal()">Отмена</button> <button (click)="sendData()">Подтвердить</button>
+        </div>
+    </ng-template>
+</p-dialog>
+<ng-container>
+
+</ng-container>

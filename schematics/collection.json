@@ -1,0 +1,16 @@
+{
+    "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+    "schematics": {
+      "theme-colors": {
+        "factory": "../dist/schematics/theme-colors/index#generateThemeColors",
+        "schema": "./theme-colors/schema.json",
+        "description": "A theme colors generator from SASS files for JavaScript using"
+      },
+      "fonts": {
+        "factory": "../dist/schematics/fonts/index#generateFonts",
+        "schema": "./fonts/schema.json",
+        "description": "A fonts generator from SASS files for JavaScript using"
+      }
+    }
+  }
+  

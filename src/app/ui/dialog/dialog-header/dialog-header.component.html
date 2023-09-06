@@ -1,0 +1,13 @@
+
+<ng-content></ng-content>
+
+<app-svg class="app-dialog-header__close-icon"
+         src="/assets/img/close.svg"
+         type="stroke"
+         (click)="_onCloseClick()">
+</app-svg>
+
+<div *ngIf="dialog._showLoader$ | async"
+     class="app-widget-spinner"
+     [style.top]="height">
+</div>

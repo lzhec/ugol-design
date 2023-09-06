@@ -1,0 +1,21 @@
+<ng-container [formGroup]="form">
+    <div style="display: flex; flex-direction: column; width: 250px; padding: 10px; gap: 10px;">
+        <div style="display: flex; flex-direction: column;">
+            <span>username</span>
+
+            <input type="text"
+                    formControlName="username" />
+        </div>
+        
+        <div style="display: flex; flex-direction: column;">
+            <span>password</span>
+
+            <input type="text"
+                    formControlName="password" />
+        </div>
+
+        <button (click)="login()">
+            Login
+        </button>
+    </div>
+</ng-container>

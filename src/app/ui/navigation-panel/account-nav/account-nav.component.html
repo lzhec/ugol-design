@@ -1,0 +1,41 @@
+<div class="user-frame" (click)="userMenu.toggle($event)">
+  <div class="user_logo" (click)="userMenu.toggle($event)">
+    <app-svg src="/assets/img/avatar.svg"></app-svg>
+  </div>
+</div>
+<p-overlayPanel #userMenu>
+  <div class="user-menu">
+    <div class="user-menu_header">
+      <div class="user-name">Иван С.А.</div>
+      <div class="user-email">example@mail.ru</div>
+    </div>
+    <div class="user-menu_buttons">
+      <div class="menu-item">
+        <div class="item-icon">
+          <app-svg src="/assets/img/products.svg"></app-svg>
+        </div>
+        <div class="item-title">Проекты</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-icon">
+          <app-svg src="/assets/img/cart.svg"></app-svg>
+        </div>
+        <div class="item-title">Заказы</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-icon">
+          <app-svg src="/assets/img/account.svg"></app-svg>
+        </div>
+        <div class="item-title">Профиль</div>
+      </div>
+    </div>
+    <div class="log-out">
+      <div class="menu-item">
+        <div class="item-icon">
+          <app-svg src="/assets/img/logout.svg"></app-svg>
+        </div>
+        <div class="item-title">Выход</div>
+      </div>
+    </div>
+  </div>
+</p-overlayPanel>

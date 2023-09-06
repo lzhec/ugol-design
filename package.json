@@ -1,0 +1,52 @@
+{
+  "name": "ugol-design",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "npm run start:dev",
+    "start:dev": "node --max_old_space_size=6000 ./node_modules/@angular/cli/bin/ng serve --host 0.0.0.0 --proxy-config=proxy/dev-proxy.conf.json --port=4200 --c=dev -o",
+    "start:prod": "node --max_old_space_size=6000 ./node_modules/@angular/cli/bin/ng serve --host 0.0.0.0 --proxy-config=proxy/dev-proxy.conf.json --port=4200 --c=prod -o",
+    "build": "npm run build:prod",
+    "build:prod": "node ./node_modules/@angular/cli/bin/ng build --c=prod",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "build-schematics": "tsc -p ./schematics/tsconfig.schematics.json",
+    "build-schematics:watch": "tsc -p ./schematics/tsconfig.schematics.json --watch",
+    "run-schematics:theme-colors": "schematics ./schematics/collection.json:theme-colors theme-colors --out-path=./src/app/shared/constants --debug=false --force",
+    "run-schematics:fonts": "schematics ./schematics/collection.json:fonts fonts --out-path=./src/app/shared/constants --debug=false --force",
+    "source-map-explorer": "source-map-explorer ./dist/*.js"
+  },
+  "schematics": "./schematics/collection.json",
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^16.1.0",
+    "@angular/cdk": "^16.2.2",
+    "@angular/common": "^16.1.0",
+    "@angular/compiler": "^16.1.0",
+    "@angular/core": "^16.1.0",
+    "@angular/forms": "^16.1.0",
+    "@angular/material": "^16.2.2",
+    "@angular/platform-browser": "^16.1.0",
+    "@angular/platform-browser-dynamic": "^16.1.0",
+    "@angular/router": "^16.1.0",
+    "@ngxs/store": "^3.8.1",
+    "primeng": "^16.3.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.1.7",
+    "@angular/cli": "~16.1.7",
+    "@angular/compiler-cli": "^16.1.0",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^16.0.0",
+    "typescript": "~5.1.3"
+  }
+}

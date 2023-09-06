@@ -1,0 +1,65 @@
+@import 'theming/functions';
+@import 'typography/mixins';
+
+$success-color: app-color(success-color);
+$success-blue-color: app-color(success-blue-color);
+$danger-color: app-color(danger-color);
+$warning-color: app-color(warning-color);
+$text-link-color: app-color(text-link-color);
+$text-color: app-color(text-color);
+$text-additional-color: app-color(text-additional-color);
+$text-additional-2-color: app-color(text-additional-2-color);
+$text-extra-color: app-color(text-extra-color);
+$text-inverse-color: app-color(text-inverse-color);
+$text-static-color: app-color(text-static-color);
+
+.app-text-success {
+  color: $success-color;
+}
+
+.app-text-success-blue {
+  color: $success-blue-color;
+}
+
+.app-text-danger {
+  color: $danger-color !important;
+}
+
+.app-text-warning {
+  color: $warning-color;
+}
+
+.app-text-link-color {
+  color: $text-link-color;
+
+  &.--pointer {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.app-text-color {
+  color: $text-color;
+
+  &-addit {
+    color: $text-additional-color;
+  }
+
+  &-addit-2 {
+    color: $text-additional-2-color;
+  }
+
+  &-extra {
+    color: $text-extra-color;
+  }
+
+  &-static {
+    color: $text-static-color;
+  }
+
+  &-inverse {
+    color: $text-inverse-color;
+  }
+}

@@ -1,0 +1,28 @@
+@import 'theming/functions';
+
+$spinner-color: app-color(bg-main-color);
+$spinner-back-color: app-color(bg-block-main-color);
+
+.app-widget-spinner {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent 3%, $spinner-color 50%, transparent 96%)
+    $spinner-back-color;
+  background-repeat: no-repeat;
+  background-size: 70% 100%;
+  animation: app-widget-spinner-anim 2s infinite linear;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @keyframes app-widget-spinner-anim {
+    0% {
+      background-position: -170%;
+    }
+    100% {
+      background-position: 330%;
+    }
+  }
+}

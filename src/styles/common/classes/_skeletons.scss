@@ -1,0 +1,32 @@
+@import 'theming/functions';
+
+$bg-color: app-color(bg-main-color);
+$success-color: app-color(success-color);
+$danger-color: app-color(danger-color);
+$warning-color: app-color(warning-color);
+
+.app-empty-skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 200px;
+  pointer-events: none;
+  color: $bg-color;
+
+  &.--pointer-events-enabled {
+    pointer-events: all;
+  }
+
+  &.--danger {
+    color: $danger-color;
+  }
+
+  &.--success {
+    color: $success-color;
+  }
+
+  &.--warning {
+    color: $warning-color;
+  }
+}

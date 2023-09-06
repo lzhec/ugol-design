@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  width: 292px;
+  height: calc(100vh - 76px);
+  padding: 32px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+  flex-shrink: 0;
+
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+    .item-logo {
+      margin-right: 14px;
+    }
+
+    .item-title {
+      color: #AFAFAF;
+      font-size: 14px;
+      font-family: Graphik LCG;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    .active {
+      color: #5092E1;
+    }
+  }
+}

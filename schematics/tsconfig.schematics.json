@@ -1,0 +1,29 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "outDir": "../dist/schematics",
+      "baseUrl": "./",
+      "lib": ["es2020", "dom"],
+      "declaration": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noEmitOnError": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "noUnusedParameters": false,
+      "noUnusedLocals": false,
+      "skipDefaultLibCheck": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strictNullChecks": true,
+      "target": "es2020",
+      "pretty": true,
+      "rootDir": "./",
+      "typeRoots": ["node_modules/@types"],
+      "types": ["node"]
+    },
+    "include": ["./"],
+    "exclude": ["./*/templates/**/*"]
+  }
+  

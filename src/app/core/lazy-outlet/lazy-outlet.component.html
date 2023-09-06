@@ -1,0 +1,23 @@
+<div *ngIf="(showProgress && lazyComponentLoading$ | async) as lazyComponentLoading"
+     class="app-lazy-outlet__progress"
+     [@lazyInProgressState]="lazyComponentLoading ? 'visible' : 'void'">
+  <ng-template [ngTemplateOutlet]="progressTemplate || defaultProgressTemplate"></ng-template>
+
+  <ng-template #defaultProgressTemplate>
+    Loading...
+  </ng-template>
+</div>
+
+<div *ngIf="(showError && lazyComponentLoadingError$ | async) as lazyComponentLoadingError"
+     class="app-lazy-outlet__error">
+  <ng-template [ngTemplateOutlet]="errorTemplate || defaultErrorTemplate"></ng-template>
+
+  <ng-template #defaultErrorTemplate>
+    Error...
+  </ng-template>
+</div>
+
+<div class="app-lazy-outlet__container"
+     [@visibleState]="_visibleState">
+  <ng-container appOutlet></ng-container>
+</div>

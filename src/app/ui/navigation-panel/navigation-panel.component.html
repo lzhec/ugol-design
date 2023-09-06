@@ -1,0 +1,18 @@
+<div class="navigation-panel">
+  <div class="panel_logo">
+    <app-svg src="/assets/img/logo.svg"></app-svg>
+  </div>
+  <nav class="panel_menu">
+    <div class="panel_menu__row">
+      <div class="menu_item">
+        <a
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: false }"
+          routerLink="/configurator"
+          >Конфигуратор</a
+        >
+      </div>
+    </div>
+  </nav>
+  <container-account-nav></container-account-nav>
+</div>

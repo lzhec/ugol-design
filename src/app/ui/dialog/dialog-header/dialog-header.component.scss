@@ -1,0 +1,26 @@
+@import "core/variables";
+@import "../dialog.variables";
+
+.app-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: $dialog-head-size;
+  min-height: $dialog-head-size;
+  padding: 0 $dialog-lr-padding;
+  margin-bottom: $dialog-tb-padding;
+  position: sticky;
+  top: 0;
+
+  &__close-icon {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .app-widget-spinner {
+    top: $dialog-head-size;
+  }
+}

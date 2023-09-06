@@ -1,0 +1,17 @@
+<div class="menu-item "
+     [routerLink]="link"
+     [routerLinkActive]="'active'"
+     [routerLinkActiveOptions]="{ exact: false }"
+>
+    <div class="item-logo">
+        <img [src]="icon">
+    </div>
+    <div class="item-title">
+        {{ title }}
+    </div>
+     <div *ngIf="additionalRows" class="item-additional-info">
+         <div *ngFor="let row of  additionalRows" class="info-row">
+             <div> {{ row.title }}</div> <div> {{ row.value }}</div>
+         </div>
+     </div>
+</div>

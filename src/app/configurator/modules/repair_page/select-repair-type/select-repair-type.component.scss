@@ -1,0 +1,33 @@
+
+.selectApply {
+width: 81px;
+height: 24px;
+
+font-family: 'Graphik LCG';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+text-align: center;
+color: #9E9E9E;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.button
+{
+  background: linear-gradient(0deg, #D5D5D5, #D5D5D5),linear-gradient(0deg, #FFFFFF, #FFFFFF); width: 297px; height: 40px;
+/* main/white */
+background: #FFFFFF;
+/* gray/border */
+border: 1px solid #D5D5D5;
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+}

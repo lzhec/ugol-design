@@ -1,0 +1,15 @@
+<ng-content select="app-dialog-header"></ng-content>
+
+<ng-content select="app-dialog-subheader"></ng-content>
+
+<div class="app-dialog__body app-scrollbar-block">
+    <div class="app-dialog__body__content"
+         [class.app-dialog__body__content--with-scroll]="_bodyHasScroll"
+         appResizeObserver
+         (appResizeObserver.heightChange)="_onHeightChange(content)"
+         #content>
+        <ng-content></ng-content>
+    </div>
+</div>
+
+<ng-content select="app-dialog-footer"></ng-content>

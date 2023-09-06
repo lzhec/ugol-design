@@ -1,0 +1,22 @@
+<app-lazy-outlet [lazyComponent]="lazyComponent">
+    <ng-template appLazyProgress>
+      <div class="app-widget-spinner"></div>
+  
+      <app-svg type="skeleton"
+               src="/assets/img/skeletons/empty-table-small.svg"
+               style="width: 100%;">
+      </app-svg>
+    </ng-template>
+  
+    <ng-template appLazyError>
+      <app-svg type="skeleton"
+               src="/assets/img/skeletons/empty-table-small.svg"
+               style="width: 100%;">
+      </app-svg>
+  
+      <app-message-skeleton [isErrorState]="true"
+                            [showReloadButtonOnError]="false"
+                            [message]="'Диалог не загружается, ошибка сетевого подключения или сервер не отвечает'">
+      </app-message-skeleton>
+    </ng-template>
+  </app-lazy-outlet>

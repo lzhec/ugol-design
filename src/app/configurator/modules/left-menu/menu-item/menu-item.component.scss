@@ -1,0 +1,24 @@
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  color: #AFAFAF;
+
+  .item-logo {
+    margin-right: 14px;
+  }
+
+  .item-title {
+    color: inherit;
+    font-size: 14px;
+    font-family: Graphik LCG, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+}
+.active {
+  color: #5092E1;
+}

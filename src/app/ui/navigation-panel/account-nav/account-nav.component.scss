@@ -1,0 +1,67 @@
+.user-frame{
+  .user_logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.user-menu {
+  position: absolute;
+  top: 20px;
+  right: -46px;
+  width: 284px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+
+  border-radius: 4px;
+  background: #FFF;
+
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+
+  .user-menu_header {
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    font-family: Graphik LCG, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    .user-name{
+      font-weight: 600;
+    }
+  }
+
+  .user-menu_buttons {
+    margin-bottom: 12px;
+
+    .menu-item {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 14px;
+      cursor: pointer;
+      font-family: Graphik LCG, sans-serif;
+
+      .item-icon {
+        margin-right: 12px;
+      }
+
+    }
+  }
+
+  .log-out {
+    .menu-item {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 14px;
+      cursor: pointer;
+
+      .item-icon {
+        margin-right: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import 'theming/functions';
+
+$bg-main-color: app-color(bg-main-color);
+$bg-additional-color: app-color(bg-additional-color);
+$bg-block-main-color: app-color(bg-block-main-color);
+$success-color: app-color(success-color);
+$success-blue-color: app-color(success-blue-color);
+$danger-color: app-color(danger-color);
+$warning-color: app-color(warning-color);
+
+.app-bg-main {
+  background-color: $bg-main-color;
+}
+
+.app-bg-addit {
+  background-color: $bg-additional-color;
+}
+
+.app-bg-block-main {
+  background-color: $bg-block-main-color;
+}
+
+.app-no-bg {
+  background-color: transparent !important;
+}
+
+.app-bg-success {
+  background-color: $success-color;
+}
+
+.app-bg-success-blue {
+  background-color: $success-blue-color;
+}
+
+.app-bg-danger {
+  background-color: $danger-color;
+}
+
+.app-bg-warning {
+  background-color: $warning-color;
+}

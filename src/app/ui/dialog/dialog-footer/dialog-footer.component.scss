@@ -1,0 +1,18 @@
+@import "../dialog.variables";
+
+.app-dialog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+
+  position: sticky;
+  bottom: 0;
+  height: $dialog-footer-size;
+  min-height: $dialog-footer-size;
+  padding: 0 $dialog-lr-padding;
+
+  app-button:not(:first-child) {
+    margin-left: 15px;
+  }
+}

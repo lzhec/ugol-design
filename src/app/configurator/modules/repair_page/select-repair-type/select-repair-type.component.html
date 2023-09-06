@@ -1,0 +1,41 @@
+<div style="width: 345px;
+height: 148px;
+padding: 24px;
+border-radius: 4px;
+background-color: #FFFFFF;
+border: 1px solid #F0F0F0;
+gap: 8px;"> 
+
+<div style="
+width: 236px;
+height: 20px;
+
+font-family: 'Graphik LCG';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+color: #000000;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;" > 
+{{caption}}
+
+</div>
+
+<div class="selectApply" *ngIf="selectStatus"> Не выбрано</div>
+<div class="selectApply" *ngIf="!selectStatus"> Выбрано</div>
+<div style="width: 297px;
+height: 40px;
+padding: 8px 0px 8px 0px;
+border: 1px;
+gap: 8px;">
+
+    <button (click)="select()" class ="button" > Выбрать</button>
+</div>
+
+</div>

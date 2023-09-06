@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="page-description">Полный перечень работ и материалов</div>
+    <div class="tab-view">
+        <p-tabView>
+            <p-tabPanel header="Перечень работ">
+                <div class="section">
+                    <div class="section_title">
+                        Общестроительные работы
+                    </div>
+                    <div class="section_amount">
+                        {{amountWorks$ | async}}
+                    </div>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="Черновые материалы">
+
+            </p-tabPanel>
+            <p-tabPanel header="Чистовые материалы">
+
+            </p-tabPanel>
+
+        </p-tabView>
+    </div>
+</div>
