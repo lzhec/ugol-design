@@ -1,4 +1,6 @@
 export enum LocalStorageConstants {
+  TokenHeader = 'X-Auth-Token',
+  Token = 'token',
   CurrentTheme = 'current_theme',
   Authorities = 'authorities',
   Role = 'role',
